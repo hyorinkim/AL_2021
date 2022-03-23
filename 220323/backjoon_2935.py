@@ -1,4 +1,6 @@
+re=""
 for i in range(3):
-    str+=input()
+    str=input()
+    re+=str
 
-print(eval(str))
+print(eval(re))
