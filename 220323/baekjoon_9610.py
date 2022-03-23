@@ -19,3 +19,11 @@ for i in range(num):
     else: di['AXIS']+=1
 for k in di:
     print(k+": "+str(di[k]))
+#short code
+d=[0]*5
+for i in range(int(input())):
+    m,n=map(int,input().split())
+    if m*n==0:d[4]+=1
+    else:d[(0 if n>0 else 3)if m>0 else(1 if n>0 else 2)]+=1 # (true 일때 )if (조건) else (false일때) 구조이다.
+for i in range(4):print("Q%d: %d"%(i+1,d[i]))# 표현 방식
+print("AXIS:",d[4])
