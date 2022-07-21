@@ -3,14 +3,24 @@
 # Press Shift+F10 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
+n,m,k=map(int,input().split())
+data = list(map(int,input().split()))
+# 탐욕법,그리디 문제
+# data에서 가장 큰수와 다음으로 가장 큰수를 뽑아내기
+data.sort(reverse=True)
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+bigOne=data[0]
+bigTwo=data[1]
+total_count=0
+answer=0
 
+while(total_count<m):
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
+    for i in range(k):
+        answer+=bigOne
+        total_count+=1
+    if (total_count % k == 0):
+        answer += bigTwo
+        total_count += 1
+print(answer)
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
