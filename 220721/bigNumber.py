@@ -11,16 +11,16 @@ data.sort(reverse=True)
 
 bigOne=data[0]
 bigTwo=data[1]
-total_count=0
 answer=0
 
-while(total_count<m):
-
+while(m>0):
     for i in range(k):
         answer+=bigOne
-        total_count+=1
-    if (total_count % k == 0):
-        answer += bigTwo
-        total_count += 1
+        m-=1
+    if (m==0):
+        break
+    answer += bigTwo
+    m -= 1
+
 print(answer)
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
